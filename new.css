@@ -1,0 +1,114 @@
+.social-media-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    top: -500px; /* 调整位置 */
+}
+
+.social-media-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-inner {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.platform {
+    flex: 1;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.platform:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.platform-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.platform-name {
+    color: rgba(130, 122, 122, 0.9);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.platform-id {
+    color: rgba(109, 101, 101, 0.7);
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+.hover-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: rotate(0deg);
+}
+
+.platform:hover .hover-effect {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+/* 为不同平台添加特定样式 */
+.wechat {
+    background: linear-gradient(
+        135deg,
+        rgba(82, 194, 52, 0.1),
+        rgba(82, 194, 52, 0.05)
+    );
+}
+
+.netease {
+    background: linear-gradient(
+        135deg,
+        rgba(236, 65, 65, 0.1),
+        rgba(236, 65, 65, 0.05)
+    );
+}
+
+/* 添加响应式设计 */
+@media screen and (max-width: 768px) {
+    .card-inner {
+        flex-direction: column;
+    }
+    
+    .platform {
+        margin-bottom: 20px;
+    }
+}

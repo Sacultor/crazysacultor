@@ -1,0 +1,139 @@
+.scroll-box {
+    position: relative;
+    top: 900px;
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* 添加装饰性光效 */
+.scroll-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    animation: rotateLight 15s linear infinite;
+}
+
+.scroll-content {
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-container {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    width: fit-content;
+    position: relative;
+}
+
+.card {
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02) rotateX(5deg);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.card h3 {
+    color: rgba(80, 80, 80, 0.9);
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    color: rgba(100, 100, 100, 0.8);
+    line-height: 1.4;
+    font-size: 0.95em;
+}
+
+/* 优化滚动动画 */
+.row-right {
+    animation: scroll-right 30s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.row-left {
+    animation: scroll-left 30s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.row-right:hover,
+.row-left:hover {
+    animation-play-state: paused;
+}
+
+/* 添加渐变边缘效果 */
+.scroll-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, rgba(255, 209, 220, 0.2) 0%, transparent 10%, transparent 90%, rgba(255, 209, 220, 0.2) 100%),
+        linear-gradient(180deg, rgba(255, 209, 220, 0.2) 0%, transparent 10%, transparent 90%, rgba(255, 209, 220, 0.2) 100%);
+    pointer-events: none;
+}
+
+@keyframes rotateLight {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 修改滚动动画 */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0) translateZ(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 3 - 75px)) translateZ(0);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(calc(-250px * 3 - 75px)) translateZ(0);
+    }
+    100% {
+        transform: translateX(0) translateZ(0);
+    }
+}

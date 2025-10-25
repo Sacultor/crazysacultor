@@ -1,0 +1,221 @@
+.interests-container {
+    position: relative;
+    width: 85%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.interests-title {
+    text-align: center;
+    color: rgba(60, 60, 60, 0.95);
+    font-size: 2.2em;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.interests-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 182, 193, 0.7), 
+        transparent
+    );
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.interest-card {
+    position: relative;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.interest-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.12),
+        inset 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 70%
+    );
+    transform: rotate(0deg);
+    transition: transform 0.6s ease;
+}
+
+.interest-card:hover::before {
+    transform: rotate(180deg);
+}
+
+.interest-icon {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interest-card:hover .interest-icon {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 1;
+}
+
+.interest-name {
+    font-size: 1.3em;
+    color: rgba(50, 50, 50, 0.95);
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.interest-description {
+    color: rgba(80, 80, 80, 0.9);
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.3px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.interest-card:hover .interest-description {
+    color: rgba(60, 60, 60, 0.95);
+}
+
+.interest-level {
+    margin-top: 18px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.level-bar {
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 182, 193, 0.7), 
+        rgba(255, 218, 224, 0.9)
+    );
+    border-radius: 3px;
+    transition: width 0.6s ease;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(255, 182, 193, 0.3);
+}
+
+.level-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    animation: shimmer 2.5s infinite;
+}
+
+/* 装饰性动画 */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .interests-container {
+        width: 92%;
+        padding: 25px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    
+    .interest-icon {
+        font-size: 2.2em;
+    }
+    
+    .interest-name {
+        font-size: 1.15em;
+    }
+    
+    .interest-description {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+}
+
+/* 悬浮提示 */
+.interest-card:hover::after {
+    content: attr(data-level);
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    opacity: 0;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+    to { 
+        opacity: 1;
+        transform: translateX(-50%) translateY(-5px);
+    }
+} 

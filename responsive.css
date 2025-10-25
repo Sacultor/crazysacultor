@@ -1,0 +1,117 @@
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    /* 调整整体布局 */
+    body {
+        padding: 10px;
+    }
+
+    /* 调整标题 */
+    .header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* 调整滚动卡片 */
+    .scroll-box {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .card {
+        min-width: 250px;
+        margin: 10px;
+    }
+
+    /* 调整个人简介卡片 */
+    .profile-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .profile-body .description {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* 调整社交媒体卡片 */
+    .social-media-card {
+        width: 100%;
+    }
+
+    .platform {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* 调整时间线 */
+    .timeline-chart {
+        padding: 10px;
+    }
+
+    .timeline-point {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .point-content {
+        padding: 10px;
+    }
+
+    /* 调整兴趣爱好网格 */
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card {
+        margin: 10px 0;
+    }
+
+    /* 调整技术栈展示 */
+    .tech-stack-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-category {
+        margin: 10px 0;
+    }
+
+    /* 调整愿望清单 */
+    .wishlist-container {
+        padding: 10px;
+    }
+
+    .wish-item {
+        margin: 10px 0;
+    }
+
+    /* 调整恐龙动画 */
+    .dinosaur-container {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 调整文字容器 */
+    .words {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* 针对更小的屏幕 */
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        min-width: 200px;
+    }
+
+    .profile-body .description {
+        font-size: 12px;
+    }
+
+    .words {
+        font-size: 12px;
+    }
+} 

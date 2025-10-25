@@ -1,0 +1,140 @@
+.timeline-chart-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    background: none;
+    border-radius: 20px;
+    position: relative;
+    top: -450px;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.chart-title {
+    text-align: center;
+    color: rgba(98, 91, 91, 0.9);
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-shadow: none;
+    top: -580px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-chart {
+    position: relative;
+    padding: 20px 0;
+    min-height: 400px;
+    top: -560px;
+    z-index: 1;
+}
+
+.chart-line {
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(167, 159, 159, 0.5) 10%,
+        rgba(255, 255, 255, 0.5) 90%,
+        transparent
+    );
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.timeline-point {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.timeline-point::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(163, 157, 157, 0.1);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.point-content {
+    position: absolute;
+    width: 250px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: none;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: none;
+}
+
+.timeline-point:nth-child(odd) .point-content {
+    left: 30px;
+}
+
+.timeline-point:nth-child(even) .point-content {
+    right: 30px;
+    transform: translateX(-30px);
+}
+
+.timeline-point:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.timeline-point:hover .point-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.year {
+    font-size: 1.2em;
+    color: rgba(79, 73, 73, 0.7);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.event {
+    font-size: 1.1em;
+    color: rgba(145, 137, 137, 0.6);
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: rgba(100, 100, 100, 0.7);
+    line-height: 1.4;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
