@@ -1,6 +1,8 @@
-.words{
-color: gray;
-font-size: 1.5em ;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-align: center;
+﻿.words {
+    color: gray;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    width: min(900px, 90%);
+    margin: 28px auto;
 }

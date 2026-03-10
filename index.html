@@ -1,18 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacultor's Channel</title>
-    <!-- 添加favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Sacultor's personal blog and creative channel.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
-    <style>
-        
-
-       
-    </style>
     <link rel="stylesheet" href="polar bear.css">
     <link rel="stylesheet" href="Scroll the box.css">
     <link rel="stylesheet" href="surround.css">
@@ -21,583 +15,151 @@
     <link rel="stylesheet" href="interests.css">
     <link rel="stylesheet" href="tech-stack.css">
     <link rel="stylesheet" href="dinosaur.css">
-    <script src="zhonglixuanfu.js"></script>
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="background--sakura.css">
     <link rel="stylesheet" href="new.css">
     <link rel="stylesheet" href="word.css">
     <link rel="stylesheet" href="responsive.css">
+    <script src="zhonglixuanfu.js" defer></script>
     <script src="sakura.js" defer></script>
-    <script src="table.js"></script>
+    <script src="table.js" defer></script>
 </head>
-
-
 <body>
- 
-
-    <!-- 添加火柴人容器 -->
     <div class="stickman-container">
         <div class="aura"></div>
         <div class="stickman">
-            <div class="head">
-                <div class="fire"></div>
-            </div>
+            <div class="head"><div class="fire"></div></div>
             <div class="body"></div>
-            <div class="arms">
-                <div class="arm-left"></div>
-                <div class="arm-right"></div>
-            </div>
-            <div class="legs">
-                <div class="leg-left"></div>
-                <div class="leg-right"></div>
-            </div>
+            <div class="arms"><div class="arm-left"></div><div class="arm-right"></div></div>
+            <div class="legs"><div class="leg-left"></div><div class="leg-right"></div></div>
         </div>
     </div>
-    
     <div class="sakura-decoration"></div>
-    <!--小熊动画-->
-    <span class="loader"></span>
-
-<!--导航栏-->
-<div class="header">
-<h1>Welcome to my UTOPIA!!!</h1>
-</div>
-
-<div class="topnav">
-<a href="#"></a>    
-</div>
-
- <!-- 添加滚动框 -->
- <div class="scroll-box">
-    <div class="scroll-content">
-        <!-- 第一行 向右滚动 -->
-        <div class="card-container row-right">
-            <!-- 原始卡片组 -->
-            <div class="card">
-                <h3>Sacultor送给16岁的Z</h3>
-                <p>我做这一切为了16岁的你，你是否听到我的声音，我在未来等你...</p>
+    <span class="loader" aria-hidden="true"></span>
+    <header class="header"><h1>Welcome to my UTOPIA!!!</h1></header>
+    <main class="page-content">
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="hero-kicker">Sacultor's Channel</p>
+                <h2 class="hero-title">Code, music, curiosity, and a little bit of chaos.</h2>
+                <p class="hero-text">I am Sacultor. I study electronics, love software, make music, and keep trying to build a life that feels more open, creative, and self-directed.</p>
+                <section class="social-media-container hero-social">
+                    <div class="social-media-card">
+                        <div class="card-inner">
+                            <div class="platform wechat">
+                                <div class="platform-icon">📱</div>
+                                <div class="platform-name">我的微信公众号</div>
+                                <div class="platform-id">乱玩的散修Sacultor</div>
+                                <div class="hover-effect"></div>
+                            </div>
+                            <div class="platform netease">
+                                <div class="platform-icon">🎵</div>
+                                <div class="platform-name">我的网易云音乐ID</div>
+                                <a href="https://music.163.com/#/artist?id=54955177" target="_blank" rel="noopener noreferrer" class="platform-id">XXZEROONTHEMARS</a>
+                                <div class="hover-effect"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="card">
-                <h3>LY</h3>
-                <p>祝你永远幼稚 幼稚的一往无前 幼稚的相信自己 幼稚的坚持自己 幼稚的热爱自己 幼稚着炽热着坚定的</p>
+            <section class="profile-card-wrapper hero-card">
+                <div class="orbit-container" aria-hidden="true">
+                    <div class="orbit-item sun">☀️</div>
+                    <div class="orbit-item moon">🌙</div>
+                    <div class="orbit-item star1">⭐</div>
+                    <div class="orbit-item star2">✨</div>
+                    <div class="orbit-item star3">⭐</div>
+                </div>
+                <div class="profile-card" id="tiltCard">
+                    <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+                    <div class="card-content">
+                        <div class="profile-header">
+                            <h2>Something about me</h2>
+                            <div class="title">IC Lover | CS Lover</div>
+                        </div>
+                        <div class="profile-body">
+                            <p class="description">Hello, my name is Sacultor. I love computer science and electronic information technology. I am a freshman majoring in electronics, and I am also deeply interested in software. I look forward to becoming a digital nomad and a full-stack engineer. I am still a rookie, but I believe I will get there. Nice to meet you.</p>
+                        </div>
+                        <div class="social-icons">
+                            <span title="Email" class="icon-btn" aria-label="Email">📧</span>
+                            <span title="GitHub" class="icon-btn" aria-label="GitHub">💻</span>
+                            <span title="Game" class="icon-btn" aria-label="Game">🎮</span>
+                            <span title="Web" class="icon-btn" aria-label="Web">🌐</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="scroll-box" aria-label="Messages from friends">
+            <div class="scroll-box-header">
+                <p class="section-kicker">Messages</p>
+                <h2>Some words from my people</h2>
             </div>
-            <div class="card">
-                <h3>ZH's answer</h3>
-                <p>这是lxz的频道，尽情欣赏他乱搞的网页</p>
+            <div class="scroll-content">
+                <div class="card-container row-right">
+                    <div class="card"><h3>Sacultor送给16岁的Z</h3><p>我做这一切为了16岁的你，你是否听到我的声音，我在未来等你...</p></div>
+                    <div class="card"><h3>LY</h3><p>祝你永远幼稚，幼稚地一往无前，幼稚地相信自己，幼稚地坚持自己，幼稚地热爱自己。</p></div>
+                    <div class="card"><h3>ZH's answer</h3><p>这是 lxz 的频道，尽情欣赏他乱搞的网页。</p></div>
+                    <div class="card"><h3>LEE!!!</h3><p>每一个念头都有新的梦境！</p></div>
+                    <div class="card"><h3>DOing</h3><p>提高你的 freestyle 水平，拒绝自我 PUA。</p></div>
+                    <div class="card"><h3>gentle</h3><p>大胆去追你的光！！！盖亚！！！</p></div>
+                </div>
+                <div class="card-container row-left">
+                    <div class="card"><h3>言宗主lmy</h3><p>我有一言，不知当讲不当讲...</p></div>
+                    <div class="card"><h3>zcj, my bro</h3><p>要始终将提升自己作为最关键的部分，积极乐观面对生活，不要委屈自己，希望下次见面时，能见到更好的你。</p></div>
+                    <div class="card"><h3>TREE</h3><p>还能想起一起骑车回家、在雪地上看车印、用剪子包袱锤决定回家还是留校。Brother is not a long-term acquaintance, but an intimate acquaintance.</p></div>
+                    <div class="card"><h3>LHHHHHH</h3><p>风不会在意你是冷还是热，它只知道你在那里。愿你不再被外界干扰，只管向上，登峰造极处，自可摘星辰。</p></div>
+                    <div class="card"><h3>KEY.L</h3><p>那一年说得最多的，就是走起来，会走起来的...</p></div>
+                    <div class="card"><h3>剑宗主ssy</h3><p>世间万般，唯快不破。</p></div>
+                </div>
             </div>
-            <!-- 克隆卡片组 -->
-            <div class="card">
-                <h3>LEE!!!</h3>
-                <p>每一个念头都有新的梦境！</p>
-            </div>
-            <div class="card">
-                <h3>DOing</h3>
-                <p>提高你的freestyle水平！拒绝自我PUA!</p>
-            </div>
-            <div class="card">
-                <h3>gentle</h3>
-                <p>大胆去追你的光！！！盖亚！！！</p>
-            </div>
-        </div>
-        
-        <!-- 第二行 向左滚动 -->
-        <div class="card-container row-left">
-            <!-- 原始卡片组 -->
-            <div class="card">
-                <h3>言宗主lmy</h3>
-                <p>我有一言，不知当讲不当讲...</p>
-            </div>
-            <div class="card">
-                <h3>zcj，my bro</h3>
-                <p>"要始终将提升自己作为最关键的部分，积极乐观面对生活，不要委屈了自己，希望下次见面，能见到更好的你"</p>
-            </div>
-            <div class="card">
-                <h3>TREE</h3>
-                <p>还能想起来咱一块骑车回家，现在看到雪地上的车印，就想起来咱俩剪子包袱锤决定回家还是留校。Brother is not a long-term acquaintance, but an intimate acquaintance.</p>
-            </div>
-            <!-- 克隆卡片组 -->
-            <div class="card">
-                <h3>LHHHHHH</h3>
-                <p>风不会在意你是冷还是热，他只知道你在那里，所以要吹向你，so，愿你不会再被外界的风所干扰，逆境也罢，顺境也罢，只管向上，向上，登峰造极处，自可摘星辰</p>
-            </div>
-            <div class="card">
-                <h3>KEY.L</h3>
-                <p>那一年说的最多的就是走起来，会走起来的...</p>
-            </div>
-            <div class="card">
-                <h3>剑宗主ssy</h3>
-                <p>世间万般，唯快不破</p>
-            </div>
-        </div>
-    </div>
-</div>                                         
-
-
-<!-- 个人简介卡片 -->
-<div class="profile-card-wrapper">
-    <div class="orbit-container">
-        <!-- 添加环绕的装饰元素 -->
-        <div class="orbit-item sun">☀️</div>
-        <div class="orbit-item moon">🌙</div>
-        <div class="orbit-item star1">⭐</div>
-        <div class="orbit-item star2">✨</div>
-        <div class="orbit-item star3">⭐</div>
-    </div>
-    
-    <div class="profile-card" id="tiltCard">
-        <!-- 添加闪烁的星星 -->
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        
-        <div class="card-content">
-            <div class="profile-header">
-                <h2>Something about me</h2>
-                <div class="title">IC Lover | CS Lover</div>
-            </div>
-            <div class="profile-body">
-                <p class="description">Hello,my name is Sacultor.I love computer and electronic information technology.I am a freshman and my major is about electronics, but I am also interested in computer software. I am looking forward to becoming a digital nomad and becoming a full-stack enginee.Although I am still very rookie, but I believe that I will succeed in the future！！！Nice to meet u！</p>
-            </div>
-            <div class="social-icons">
-                <a href="#" title="Email" class="icon-btn">📧</a>
-                <a href="#" title="GitHub" class="icon-btn">💻</a>
-                <a href="#" title="Game" class="icon-btn">🎮</a>
-                <a href="#" title="Web" class="icon-btn">🌐</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 在个人简介卡片后面添加作为补充 -->
-<div class="social-media-container">
-    <div class="social-media-card">
-        <div class="card-inner">
-            <div class="platform wechat">
-                <div class="platform-icon">📱</div>
-                <div class="platform-name">我的微信公众号</div>
-                <div class="platform-id">乱玩的散修Sacultor</div>
-                <div class="hover-effect"></div>
-            </div>
-            <div class="platform netease">
-                <div class="platform-icon">🎵</div>
-                <div class="platform-name">我的网易云音乐ID</div>
-                <a href="https://music.163.com/#/artist?id=54955177" target="_blank" class="platform-id">XXZEROONTHEMARS</a>
-                <div class="hover-effect"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--樱花背景-->
-<div id="sakuraGradient"></div>
-
-
-
-<!--成长历程-->
-<div class="timeline-chart-container"></div>
-    <h2 class="chart-title">My past experiences</h2>
+        </section>
+<div id="sakuraGradient" aria-hidden="true"></div>
+<section class="timeline-chart-container">
+    <h2 class="chart-title">My Past Experiences</h2>
     <div class="timeline-chart">
         <div class="chart-line"></div>
-        <div class="timeline-point" data-year="2018">
-            <div class="point-content">
-                <div class="year">2005--2021</div>
-                <div class="event">My "childhood"</div>
-                <div class="description">When I was in elementary school and junior high school, I was a typical Chinese child. I was doing my homework and exams every day, and there was nothing worth keeping a record of</div>
-            </div>
-        </div>
-        <div class="timeline-point" data-year="2019">
-            <div class="point-content">
-                <div class="year">2021summer&2022</div>
-                <div class="event">My first year of high school
-                </div>
-                <div class="description">I got into the best high school in the city, even though I failed the college entrance exam.
-                    When I was a freshman in high school, I only felt that exam-oriented education was boring, so I played a lot. Gradually, falling behind others
-                And the life in school was still boring.Now i still think i was constrained by gaokao at that time.</div>
-            </div>
-        </div>
-        <div class="timeline-point" data-year="2020">
-            <div class="point-content">
-                <div class="year">2022winter&2023</div>
-                <div class="event">Second year of high school</div>
-                <div class="description">At that time I'm obsessed with music.And i published my first song on CLOUD MUSIC
-                    its name is 由于缺失神力，只能近地飞行.And I gave myself a stage name,XXZEROONTHEMARS
-                emmmmmand....i fell in love with a girl.It is my pleasure.But it is an inopportune time.Although i love her but we had to break... 
-                when i get my first 100w,maybe i will go to her and ask her what she was thinking at the time
-                </div>
-            </div>
-        </div>
-        <div class="timeline-point" data-year="2021">
-            <div class="point-content">
-                <div class="year">2023summer&2024</div>
-                <div class="event">My last year at high school</div>
-                <div class="description">The fxxking gaokao is coming.
-                    At these days,I don't understand why all the teachers and classmates have become more united than ever
-                    I made a lot of good friends and we had an unforgettable time together</div>
-            </div>
-        </div>
-        <div class="timeline-point" data-year="2022">
-            <div class="point-content">
-                <div class="year">2024andFUTURE</div>
-                <div class="event">my life in the future</div>
-                <div class="description">i have many things need to learn.I don't want to fall into the cliché and go down a crowded road.So just go and see!!!</div>
-            </div>
-        </div>
+        <div class="timeline-point" data-year="2018"><div class="point-content"><div class="year">2005-2021</div><div class="event">My childhood</div><div class="description">When I was in elementary school and junior high school, I was a typical Chinese child. Life was mostly homework, exams, and quiet routines.</div></div></div>
+        <div class="timeline-point" data-year="2019"><div class="point-content"><div class="year">2021 Summer - 2022</div><div class="event">My first year of high school</div><div class="description">I entered the best high school in the city. At that time I felt exam-oriented education was boring, so I played a lot and gradually fell behind.</div></div></div>
+        <div class="timeline-point" data-year="2020"><div class="point-content"><div class="year">2022 Winter - 2023</div><div class="event">Second year of high school</div><div class="description">I became obsessed with music, released my first song on Cloud Music, and used the stage name XXZEROONTHEMARS. I also experienced love, timing, and regret.</div></div></div>
+        <div class="timeline-point" data-year="2021"><div class="point-content"><div class="year">2023 Summer - 2024</div><div class="event">My last year of high school</div><div class="description">Gaokao was approaching. Strangely, those intense days also brought the strongest sense of friendship and togetherness I had felt.</div></div></div>
+        <div class="timeline-point" data-year="2022"><div class="point-content"><div class="year">2024 and Future</div><div class="event">Life ahead</div><div class="description">I still have many things to learn. I do not want to go down a crowded road just because it is common. I want to go and see for myself.</div></div></div>
     </div>
-</div>
-
-<!-- 兴趣爱好 -->
-<div class="interests-container">
-    <h2 class="interests-title">🌈 My Interests & Hobbies 🌈</h2>
-    
+</section>
+<section class="interests-container">
+    <h2 class="interests-title">🌈 My Interests &amp; Hobbies 🌈</h2>
     <div class="interests-grid">
-        <div class="interest-card" data-level="热爱程度: 100%">
-            <div class="interest-icon">💻</div>
-            <div class="interest-name">Coding</div>
-            <div class="interest-description">I passionate about writing code, creating interesting projects, and exploring new technologies.</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 95%;"></div>
-            </div>
-        </div>
-
-        <div class="interest-card" data-level="热爱程度: 70%">
-            <div class="interest-icon">🎮</div>
-            <div class="interest-name">Video Games</div>
-            <div class="interest-description">I enjoy the fun that games bring, especially MOBAs and strategy games.</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 90%;"></div>
-            </div>
-        </div>
-
-        <div class="interest-card" data-level="热爱程度: 100%">
-            <div class="interest-icon">🎵</div>
-            <div class="interest-name">Music Creation</div>
-            <div class="interest-description">I enjoy composing music and creating my own musical works,especially Rap.</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 85%;"></div>
-            </div>
-        </div>
-
-        <div class="interest-card" data-level="热爱程度: 60%">
-            <div class="interest-icon">🏀</div>
-            <div class="interest-name">Basketball</div>
-            <div class="interest-description">I love playing basketball, and even though I'm a rookie, I love to play hahaha</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 80%;"></div>
-            </div>
-        </div>
-
-        <div class="interest-card" data-level="热爱程度: 90%">
-            <div class="interest-icon">🎨</div>
-            <div class="interest-name">funny little thing</div>
-            <div class="interest-description">I like to collect funny little objects, I think it's very interesting and creative, and it will enrich my thinking</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 75%;"></div>
-            </div>
-        </div>
-
-        <div class="interest-card" data-level="热爱程度: 100%">
-            <div class="interest-icon">🌏</div>
-            <div class="interest-name">Exploring the World</div>
-            <div class="interest-description">I enjoy understanding different cultures and technologies, expanding my horizons.</div>
-            <div class="interest-level">
-                <div class="level-bar" style="width: 70%;"></div>
-            </div>
-        </div>
+        <div class="interest-card" data-level="热爱程度: 100%"><div class="interest-icon">💻</div><div class="interest-name">Coding</div><div class="interest-description">I am passionate about writing code, building interesting projects, and exploring new technologies.</div><div class="interest-level"><div class="level-bar" style="width: 95%;"></div></div></div>
+        <div class="interest-card" data-level="热爱程度: 70%"><div class="interest-icon">🎮</div><div class="interest-name">Video Games</div><div class="interest-description">I enjoy the fun that games bring, especially MOBAs and strategy games.</div><div class="interest-level"><div class="level-bar" style="width: 90%;"></div></div></div>
+        <div class="interest-card" data-level="热爱程度: 100%"><div class="interest-icon">🎵</div><div class="interest-name">Music Creation</div><div class="interest-description">I enjoy composing music and creating my own work, especially rap.</div><div class="interest-level"><div class="level-bar" style="width: 85%;"></div></div></div>
+        <div class="interest-card" data-level="热爱程度: 60%"><div class="interest-icon">🏀</div><div class="interest-name">Basketball</div><div class="interest-description">I love playing basketball. Even though I am still a rookie, I really enjoy being on the court.</div><div class="interest-level"><div class="level-bar" style="width: 80%;"></div></div></div>
+        <div class="interest-card" data-level="热爱程度: 90%"><div class="interest-icon">🎨</div><div class="interest-name">Funny Little Things</div><div class="interest-description">I like collecting small interesting objects. They feel creative and they always expand my way of thinking.</div><div class="interest-level"><div class="level-bar" style="width: 75%;"></div></div></div>
+        <div class="interest-card" data-level="热爱程度: 100%"><div class="interest-icon">🌏</div><div class="interest-name">Exploring the World</div><div class="interest-description">I enjoy understanding different cultures and technologies, and I want to keep expanding my horizon.</div><div class="interest-level"><div class="level-bar" style="width: 70%;"></div></div></div>
     </div>
-</div>
-
-<!--用来过度的句子-->
-<diV class="words">
-    I love adventure and I am curious about all kinds of interesting things. I love talking to different people and they bring me new perspectives
-    </diV>
-    
-
-<!-- 愿望清单 -->
-<div class="wishlist-container">
+</section>
+<div class="words">I love adventure and I am curious about all kinds of interesting things. Talking with different people always gives me a new perspective.</div>
+<section class="wishlist-container">
     <h2 class="wishlist-title">✨ My Wishlist ✨</h2>
-    
-    <div class="wish-item">
-        <div class="wish-title">
-            <span class="wish-icon">🎓</span>
-            Become a Full-Stack Engineer
-        </div>
-        <div class="wish-description">
-            Master both front-end and back-end technologies to independently develop complete web applications. Currently studying front-end technologies, and will continue to delve into back-end development in the future.
-        </div>
-        <div class="wish-progress">
-            <div class="progress-bar" style="width: 30%;"></div>
-        </div>
-    </div>
-
-    <div class="wish-item">
-        <div class="wish-title">
-            <span class="wish-icon">💻</span>
-            Develop Personal Projects
-        </div>
-        <div class="wish-description">
-            Create a meaningful personal project that can help others and gain a certain fans.
-        </div>
-        <div class="wish-progress">
-            <div class="progress-bar" style="width: 15%;"></div>
-        </div>
-    </div>
-
-    <div class="wish-item">
-        <div class="wish-title">
-            <span class="wish-icon">🌟</span>
-            Participate in Open Source Projects
-        </div>
-        <div class="wish-description">
-            Make contributions to the open source community, participate in influential open source project development, and enhance programming skills.
-        </div>
-        <div class="wish-progress">
-            <div class="progress-bar" style="width: 5%;"></div>
-        </div>
-    </div>
-
-    <div class="wish-item">
-        <div class="wish-title">
-            <span class="wish-icon">🚀</span>
-            Entrepreneurial Dream
-        </div>
-        <div class="wish-description">
-            Hope to establish my own company in the future, develop innovative products, and realize business value.
-        </div>
-        <div class="wish-progress">
-            <div class="progress-bar" style="width: 10%;"></div>
-        </div>
-    </div>
-
-    <div class="wish-item">
-        <div class="wish-title">
-            <span class="wish-icon">🌍</span>
-            Travel the World
-        </div>
-        <div class="wish-description">
-            Hope to explore the cultures of various places around the world in my spare time from work, to broaden my knowledge and expand my horizons.
-
-
-        </div>
-        <div class="wish-progress">
-            <div class="progress-bar" style="width: 20%;"></div>
-        </div>
-    </div>
-</div>
-
-<!-- 技术栈展示区域 -->
-<div class="tech-stack-container">
+    <div class="wish-item"><div class="wish-title"><span class="wish-icon">🎯</span>Become a Full-Stack Engineer</div><div class="wish-description">Master both front-end and back-end technologies so I can independently build complete web applications.</div><div class="wish-progress"><div class="progress-bar" style="width: 30%;"></div></div></div>
+    <div class="wish-item"><div class="wish-title"><span class="wish-icon">💻</span>Develop Personal Projects</div><div class="wish-description">Create meaningful projects that can help other people and build an audience around what I make.</div><div class="wish-progress"><div class="progress-bar" style="width: 15%;"></div></div></div>
+    <div class="wish-item"><div class="wish-title"><span class="wish-icon">🌐</span>Participate in Open Source Projects</div><div class="wish-description">Contribute to the open source community, join influential projects, and sharpen my programming skills in public.</div><div class="wish-progress"><div class="progress-bar" style="width: 5%;"></div></div></div>
+    <div class="wish-item"><div class="wish-title"><span class="wish-icon">🚀</span>Entrepreneurial Dream</div><div class="wish-description">I hope to build my own company in the future, make innovative products, and turn ideas into real value.</div><div class="wish-progress"><div class="progress-bar" style="width: 10%;"></div></div></div>
+    <div class="wish-item"><div class="wish-title"><span class="wish-icon">🌍</span>Travel the World</div><div class="wish-description">I hope to explore different places and cultures in my free time, broaden my horizons, and keep life from becoming narrow.</div><div class="wish-progress"><div class="progress-bar" style="width: 20%;"></div></div></div>
+</section>
+<section class="tech-stack-container">
     <h2 class="tech-stack-title">🚀 Coding Skills 🚀</h2>
-    
     <div class="tech-stack-grid">
-        <!-- 前端技术 -->
-        <div class="tech-category">
-            <h3 class="category-title">
-                <span class="category-icon">🎨</span>
-                Front-End Development
-            </h3>
-            <div class="tech-bars">
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">"前端三件套"</span>
-                        <span class="tech-percentage">50%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">React</span>
-                        <span class="tech-percentage">30%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">vue</span>
-                        <span class="tech-percentage">5%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 后端技术 -->
-        <div class="tech-category">
-            <h3 class="category-title">
-                <span class="category-icon">⚙️</span>
-                Back-End Development
-            </h3>
-            <div class="tech-bars">
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Python</span>
-                        <span class="tech-percentage">40%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Node.js</span>
-                        <span class="tech-percentage">15%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Database.</span>
-                        <span class="tech-percentage">0%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 开发工具 -->
-        <div class="tech-category">
-            <h3 class="category-title">
-                <span class="category-icon">🛠️</span>
-                Development Tools
-            </h3>
-            <div class="tech-bars">
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Git</span>
-                        <span class="tech-percentage">80%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">VS Code</span>
-                        <span class="tech-percentage">90%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Docker</span>
-                        <span class="tech-percentage">0%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 65%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 其他技能 -->
-        <div class="tech-category">
-            <h3 class="category-title">
-                <span class="category-icon">🎯</span>
-                Other Skills
-            </h3>
-            <div class="tech-bars">
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">UI Design</span>
-                        <span class="tech-percentage">10%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">Project Management</span>
-                        <span class="tech-percentage">40%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-info">
-                        <span class="tech-name">BlockChain</span>
-                        <span class="tech-percentage">30%</span>
-                    </div>
-                    <div class="tech-bar-bg">
-                        <div class="tech-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="tech-category"><h3 class="category-title"><span class="category-icon">🖥️</span>Front-End Development</h3><div class="tech-bars"><div class="tech-item"><div class="tech-info"><span class="tech-name">HTML / CSS / JavaScript</span><span class="tech-percentage">50%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 85%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">React</span><span class="tech-percentage">30%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 80%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Vue</span><span class="tech-percentage">5%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 75%"></div></div></div></div></div>
+        <div class="tech-category"><h3 class="category-title"><span class="category-icon">⚙️</span>Back-End Development</h3><div class="tech-bars"><div class="tech-item"><div class="tech-info"><span class="tech-name">Python</span><span class="tech-percentage">40%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 90%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Node.js</span><span class="tech-percentage">15%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 70%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Database</span><span class="tech-percentage">0%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 75%"></div></div></div></div></div>
+        <div class="tech-category"><h3 class="category-title"><span class="category-icon">🛠️</span>Development Tools</h3><div class="tech-bars"><div class="tech-item"><div class="tech-info"><span class="tech-name">Git</span><span class="tech-percentage">80%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 85%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">VS Code</span><span class="tech-percentage">90%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 90%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Docker</span><span class="tech-percentage">0%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 65%"></div></div></div></div></div>
+        <div class="tech-category"><h3 class="category-title"><span class="category-icon">🎯</span>Other Skills</h3><div class="tech-bars"><div class="tech-item"><div class="tech-info"><span class="tech-name">UI Design</span><span class="tech-percentage">10%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 75%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Project Management</span><span class="tech-percentage">40%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 80%"></div></div></div><div class="tech-item"><div class="tech-info"><span class="tech-name">Blockchain</span><span class="tech-percentage">30%</span></div><div class="tech-bar-bg"><div class="tech-bar" style="width: 85%"></div></div></div></div></div>
     </div>
-</div>
-
-<div class="words">
-    I know I still have a lot to learn, 
-    but I love it and don't get bored, 
-    maybe it's the so-called university atmosphere
-</div>
-
-<div class="words">
-    NICE TO MEET U ,I LOVE MAKE FRIENDS.AND FINNALLY I REALLY WANT TO SAY WELCOME TO MY CHANNEL,MY NAME IS SACULTOR,A BAD GUY WHO HAS HIS OWN DREAM 很高兴认识你！
-</div>
-
-<div class="words">
-欢迎来到！！我的！！！乌托邦！！！我们下次见！！！
-
-</div>
-
-<!-- 添加吐火小恐龙 -->
-<div class="dinosaur-container">
-    <div class="dinosaur">
-        <!-- 身体部分 -->
-        <div class="dino-body">
-            <!-- 装饰性鳞片 -->
-            <div class="dino-scales">
-                <div class="scale"></div>
-                <div class="scale"></div>
-                <div class="scale"></div>
-                <div class="scale"></div>
-                <div class="scale"></div>
-            </div>
-        </div>
-        
-        <!-- 头部 -->
-        <div class="dino-head">
-            <div class="dino-eye"></div>
-            <!-- 火焰效果 -->
-            <div class="fire-breath">
-                <div class="fire-core"></div>
-                <div class="fire-particles">
-                    <div class="fire-particle"></div>
-                    <div class="fire-particle"></div>
-                    <div class="fire-particle"></div>
-                    <div class="fire-particle"></div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 尾巴 -->
-        <div class="dino-tail"></div>
-        
-        <!-- 腿部 -->
-        <div class="dino-legs">
-            <div class="leg leg-front"></div>
-            <div class="leg leg-back"></div>
-        </div>
-    </div>
-</div>
-
+</section>
+<div class="words">I know I still have a lot to learn, but I love the process and never really get bored. Maybe that is the so-called university atmosphere.</div>
+<div class="words">Nice to meet you. I love making friends, and I really want to say: welcome to my channel. My name is Sacultor, a dreamer who is still building his own road.</div>
+<div class="words">欢迎来到我的乌托邦，我们下次见。</div>
+<section class="dinosaur-container" aria-hidden="true"><div class="dinosaur"><div class="dino-body"><div class="dino-scales"><div class="scale"></div><div class="scale"></div><div class="scale"></div><div class="scale"></div><div class="scale"></div></div></div><div class="dino-head"><div class="dino-eye"></div><div class="fire-breath"><div class="fire-core"></div><div class="fire-particles"><div class="fire-particle"></div><div class="fire-particle"></div><div class="fire-particle"></div><div class="fire-particle"></div></div></div></div><div class="dino-tail"></div><div class="dino-legs"><div class="leg leg-front"></div><div class="leg leg-back"></div></div></div></section>
+    </main>
 </body>
 </html>
-
-
