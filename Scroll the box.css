@@ -104,11 +104,13 @@
 }
 
 @keyframes scroll-right {
+    /* 从 0 移动到 -50%（移动一组卡片的宽度），配合 HTML 中内容重复，形成无缝循环 */
     0% { transform: translateX(0) translateZ(0); }
-    100% { transform: translateX(calc(-250px * 3 - 75px)) translateZ(0); }
+    100% { transform: translateX(-50%) translateZ(0); }
 }
 
 @keyframes scroll-left {
-    0% { transform: translateX(calc(-250px * 3 - 75px)) translateZ(0); }
+    /* 反向移动以实现相反方向的无缝循环 */
+    0% { transform: translateX(-50%) translateZ(0); }
     100% { transform: translateX(0) translateZ(0); }
 }
