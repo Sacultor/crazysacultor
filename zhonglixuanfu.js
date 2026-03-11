@@ -23,14 +23,57 @@
         updateCardTransform(rotateX, rotateY);
     }
 
+    // Use requestAnimationFrame to throttle mousemove updates and avoid layout thrashing
+    let rafId = null;
+    let lastEvent = null;
+    // When hovering interactive elements (icons), pause tilt to avoid cursor flicker
+    function isOverInteractive(evt) {
+        try {
+            return evt && evt.target && evt.target.closest && evt.target.closest('.icon-btn');
+        } catch (e) {
+            return false;
+        }
+    }
     function handleMouseMove(event) {
-        const rect = card.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+        // skip updating while pointer is over icon buttons
+        if (isOverInteractive(event)) return;
+        lastEvent = event;
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+            rafId = null;
+            const rect = card.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
 
-        const rotateY = ((event.clientX - centerX) / (rect.width / 2)) * maxRotate;
-        const rotateX = -((event.clientY - centerY) / (rect.height / 2)) * maxRotate;
-        updateCardTransform(rotateX, rotateY);
+            const rotateY = ((lastEvent.clientX - centerX) / (rect.width / 2)) * maxRotate;
+            const rotateX = -((lastEvent.clientY - centerY) / (rect.height / 2)) * maxRotate;
+            updateCardTransform(rotateX, rotateY);
+        });
+    }
+
+    // Clipboard copy / link handling for social icons
+    const emailBtn = document.getElementById('emailBtn');
+    if (emailBtn) {
+        const email = 'sacultorlee@gmail.com';
+        emailBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => showCopyToast(emailBtn, 'Copied'));
+            } else {
+                // fallback
+                const ta = document.createElement('textarea'); ta.value = email; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); showCopyToast(emailBtn, 'Copied'); } catch (err) { showCopyToast(emailBtn, 'Fail'); } ta.remove();
+            }
+        });
+        emailBtn.addEventListener('mouseenter', () => { emailBtn.style.cursor = 'pointer'; });
+    }
+
+    function showCopyToast(target, text) {
+        const toast = document.createElement('span');
+        toast.className = 'copy-toast';
+        toast.textContent = text;
+        target.appendChild(toast);
+        setTimeout(() => { toast.classList.add('visible'); }, 10);
+        setTimeout(() => { toast.classList.remove('visible'); setTimeout(() => toast.remove(), 300); }, 1500);
     }
 
     function updateCardTransform(rotateX, rotateY) {
